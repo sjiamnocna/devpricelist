@@ -127,33 +127,38 @@ export const enum PaymentModifier {
     Milestone = 1.08, // Gives no guarantee of payment, so it increases the rate
 }
 
+export type T_modifiers = {
+    language: LanguageModifier;
+    activity: ActivityModifier;
+    client: ClientModifier;
+    clientBehavior: ClientBehaviorModifier;
+    documentation: DocumentationModifier;
+    complexity: ComplexityModifier;
+    urgency: UrgencyModifier;
+    hours: WorkingHoursModifier;
+    communication: CommunicationModifier;
+    techdebt: TechDebtModifier;
+    location: LocationModifier;
+    form: FormModifier;
+    team: TeamModifier;
+    middleman: MiddlemanModifier;
+    payment: PaymentModifier;
+};
+
 /**
  * ModifierList interface defines the structure for holding all modifiers used in the rate calculation.
  */
-export interface ModifierList {
-    language: LanguageModifier | number;
-    activity: ActivityModifier | number;
-    client: ClientModifier | number;
-    clientBehavior: ClientBehaviorModifier | number;
-    documentation: DocumentationModifier | number;
-    complexity: ComplexityModifier | number;
-    urgency: UrgencyModifier | number;
-    hours: WorkingHoursModifier | number;
-    communication: CommunicationModifier | number;
-    techdebt: TechDebtModifier | number;
-    location: LocationModifier | number;
-    form: FormModifier | number;
-    team: TeamModifier | number;
-    middleman: MiddlemanModifier | number;
-    payment: PaymentModifier | number;
-    custom?: Record<string, number>;
-}
+export type ModifierList = {
+    [K in keyof T_modifiers]: (T_modifiers[K] | Number);
+};
 
 /**
  * ModifierListArrays type defines the structure for holding all ModifierList fields as arrays of their type.
  */
 export type ModifierListArrays = {
     [K in keyof ModifierList]: Array<ModifierList[K]>;
+} & {
+    custom?: Record<string, number>;
 };
 
 /**
