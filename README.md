@@ -23,13 +23,17 @@ This is mostly fun project, so enjoy playing with the prices :)
 import { ClientModifier, LanguageModifier, ActivityModifier, ClientBehaviorModifier, DocumentationModifier, ComplexityModifier, UrgencyModifier, WorkingHoursModifier, CommunicationModifier, TechDebtModifier, LocationModifier, FormModifier, TeamModifier, MiddlemanModifier, PaymentModifier } from "./data/modifiers";
 import { RateCalculator } from "./data/RateCalculator";
 
-// Basic hour rate in Europe is 
-const RC = new RateCalculator(30);
+// Basic hour rate you want to use for your calculations
+const RC = new RateCalculator(20);
 
 // Add all defined modifiers to the rate calculator
-RC.addModifier('client', ClientModifier.Startup); // Passive client
+// you can add multiple modifiers of the same type
+RC.addModifier('client', ClientModifier.Startup); // Client is a startup
+RC.addModifier('client', ClientModifier.Government); // Passive client
 RC.addModifier('language', LanguageModifier.TypeScript);
+RC.addModifier('language', LanguageModifier.Go);
 RC.addModifier('activity', ActivityModifier.Development);
+RC.addModifier('activity', ActivityModifier.Documentation);
 RC.addModifier('clientBehavior', ClientBehaviorModifier.TellsMeHowToDoMyJob);
 RC.addModifier('documentation', DocumentationModifier.None);
 RC.addModifier('complexity', ComplexityModifier.Medium);
