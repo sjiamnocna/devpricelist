@@ -60,6 +60,7 @@ bun run src/index.ts
 ## Discussion
 Please feel free to **discuss on modifier values** as it applies to your job performance, health or other factors that may affect your rate.
 The values are subjective and can vary widely based on personal experience and market conditions.
+Also account for real-world costs like time wasted, demotivation and anger with the company or client.
 
 ## DONATE
 If you find this project useful, please consider supporting its development:

@@ -129,15 +129,15 @@ export const enum ClientBehaviorModifier {
     /**
      * Passive - Client is less involved in the process
      */
-    Passive = 1.02,
+    Passive = 1.05,
     /**
      * TellsMeHowToDoMyJob - Client frequently provides technical direction
      */
-    TellsMeHowToDoMyJob = 1.05,
+    TellsMeHowToDoMyJob = 1.15,
     /**
      * Aggressive - Client is demanding and high-pressure
      */
-    Aggressive = 1.07,
+    Aggressive = 1.25,
 }
 
 /**
@@ -148,19 +148,19 @@ export const enum CommunicationModifier {
     /**
      * Email - Communication via email
      */
-    Email = 1,
+    Email = 1.02,
     /**
      * Weekly Calls - Regular weekly meetings
      */
-    WeeklyCalls = 1.02,
+    WeeklyCalls = 1.05,
     /**
      * Daily Calls - Daily check-in meetings
      */
-    DailyCalls = 1.03,
+    DailyCalls = 1.12,
     /**
      * Slack Micromanagement - Frequent Slack messages and updates
      */
-    SlackMicromanage = 1.05,
+    SlackMicromanage = 1.2,
 }
 
 /**
@@ -175,11 +175,11 @@ export const enum ComplexityModifier {
     /**
      * Medium - Tasks with some complexity but manageable
      */
-    Medium = 1.02,
+    Medium = 1.1,
     /**
      * Complex - Challenging tasks requiring significant effort
      */
-    Complex = 1.04,
+    Complex = 1.15,
 }
 
 /**
@@ -194,11 +194,11 @@ export const enum UrgencyModifier {
     /**
      * Normal - Standard project timeline
      */
-    Normal = 1.01,
+    Normal = 1.05,
     /**
      * Tight Deadline - Project needs to be completed quickly
      */
-    TightDeadline = 1.05,
+    TightDeadline = 1.2,
     /**
      * Yesterday - Extremely urgent, needed immediately
      */
@@ -217,15 +217,15 @@ export const enum WorkingHoursModifier {
     /**
      * Evening - Working after regular business hours
      */
-    Evening = 1.01,
+    Evening = 1.05,
     /**
      * Weekend - Working on weekends
      */
-    Weekend = 1.02,
+    Weekend = 1.15,
     /**
      * Holiday - Working on holidays
      */
-    Holiday = 1.05,
+    Holiday = 1.5,
 }
 
 /**
@@ -240,15 +240,15 @@ export const enum TechDebtModifier {
     /**
      * Spaghetti - Working with poorly organized code
      */
-    Spaghetti = 1.02,
+    Spaghetti = 1.15,
     /**
      * Legacy - Working with older, outdated systems
      */
-    Legacy = 1.04,
+    Legacy = 1.25,
     /**
      * Abandonware - Working with neglected or abandoned code
      */
-    Abandonware = 3,
+    Abandonware = 1.5,
 }
 
 /**
@@ -263,15 +263,15 @@ export const enum LocationModifier {
     /**
      * Europe - Working with European clients
      */
-    Europe = 1.07,
+    Europe = 1.1,
     /**
      * USA - Working with US-based clients usually means higher rates
      */
-    USA = 1.25,
+    USA = 1.15,
     /**
      * Unknown - Working with clients of uncertain location
      */
-    Unknown = 2,
+    Unknown = 1.5,
 }
 
 /**
@@ -282,15 +282,15 @@ export const enum FormModifier {
     /**
      * Onsite - Working at the client's location
      */
-    Onsite = 1.15,
-    /**
-     * Remote - Working from your own location
-     */
-    Remote = 1.1,
+    Onsite = 1.3,
     /**
      * Hybrid - Mix of onsite and remote work
      */
-    Hybrid = 1,
+    Hybrid = 1.15,
+    /**
+     * Remote - Working from your own location
+     */
+    Remote = 1.05,
 }
 
 /**
@@ -305,19 +305,19 @@ export const enum DocumentationModifier {
     /**
      * Good - Documentation exists but could be improved
      */
-    Good = 1.02,
+    Good = 1.05,
     /**
      * Fair - Basic documentation available
      */
-    Fair = 1.05,
+    Fair = 1.12,
     /**
      * Minimal - Very limited documentation
      */
-    Minimal = 1.08,
+    Minimal = 1.25,
     /**
      * None - No documentation available
      */
-    None = 1.2,
+    None = 1.5,
 }
 
 /**
@@ -328,19 +328,19 @@ export const enum TeamModifier {
     /**
      * Solo - Working independently
      */
-    Solo = 1,
+    Solo = 1.1,
     /**
      * Small - Working with 2-5 team members
      */
-    Small = 1.01,
+    Small = 1.05,
     /**
      * Medium - Working with 6-15 team members
      */
-    Medium = 1.02,
+    Medium = 1.15,
     /**
      * Large - Working with more than 15 team members
      */
-    Large = 1.05,
+    Large = 1.3,
 }
 
 /**
@@ -355,15 +355,15 @@ export const enum MiddlemanModifier {
     /**
      * Agency - Working through an agency
      */
-    Agency = 1.02,
+    Agency = 1.1,
     /**
      * Recruiter - Working through a recruiter
      */
-    Recruiter = 1.02,
+    Recruiter = 1.05,
     /**
      * Upwork - Working through the Upwork platform
      */
-    Upwork = 1.05,
+    Upwork = 1.15,
 }
 
 /**
@@ -374,19 +374,19 @@ export const enum PaymentModifier {
     /**
      * Fixed - Fixed price for the entire project
      */
-    Fixed = 1,
+    Fixed = 1.1,
     /**
      * Hourly - Payment based on hours worked
      */
-    Hourly = 1.02,
+    Hourly = 1.05,
     /**
      * Retainer - Regular payment for ongoing work
      */
-    Retainer = 1.05,
+    Retainer = 1.02,
     /**
      * Milestone - Payment at specific project milestones
      */
-    Milestone = 1.08,
+    Milestone = 1.15,
 }
 
 /**
